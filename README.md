@@ -1,2 +1,2 @@
 # Cpp-Programs
-C++ Programs (using DevC++ &amp; Visual Studio)
+Contains C++ Programs, using DevC++ & Visual Studio.
