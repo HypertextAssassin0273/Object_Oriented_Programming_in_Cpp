@@ -1,2 +1,2 @@
 # Cpp-Programs
-Contains some useful C++ Programs, using DevC++.
+Contains some useful C++ Programs, developed through DevC++.
