@@ -1,7 +1,7 @@
 ### UML DIAGRAM (Problem Description)
 ![](Question_UML.jpeg)
 ### HINTS & GUIDE
-![](Question_Guide.jpeg)
+![]()
 
 ### NOTE
 In this problem, You will also learn following concepts:
