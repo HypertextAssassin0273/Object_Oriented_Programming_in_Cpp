@@ -3,7 +3,7 @@
 ### HINTS & GUIDE
 ![](Question_Guide_H.jpeg)
 
-### NOTE
+### NOTE (Learning Outcomes)
 In this problem, You will also learn following concepts:
 1) Mapping Generalized UML as Interface/Abstract class problem
 2) Use of void* pointer in Abstract class
