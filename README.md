@@ -8,9 +8,12 @@ So, here is a great article for starters which will give you brief intro about t
 [C++11 vs C++14 vs C++17](https://www.geeksforgeeks.org/c-11-vs-c-14-vs-c-17/)
 
 ## Learning Material
-#### [-Learn Advance & Modern C++/C++11 (by BoQian, personally recommended channel)](https://www.youtube.com/user/BoQianTheProgrammer/playlists)
-#### [-Learn C++ with CppNuts (by Rupesh Yadav, reference channel for specific problems)](https://www.youtube.com/c/CppNuts/playlists)
-#### [-Learn Complete Basics of C++ (by Programiz)](https://www.programiz.com/cpp-programming)
+#### [-Learn Advance & Modern C++/C++11 (by BoQian, for exploring deep concepts)](https://www.youtube.com/user/BoQianTheProgrammer/playlists)
+#### [-C++ with CppNuts (by Rupesh Yadav, for advance & specific problems)](https://www.youtube.com/c/CppNuts/playlists)
+#### [-C++ made easy (by The Cherno, for basic & specific problems)](https://youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
+#### [-Learn Complete Basics of C++ (by Programiz, full course-outline)](https://www.programiz.com/cpp-programming)
+#### [-C++ Tutorials for Beginners (by CodeWithHarry, in Hindi/Urdu)](https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL)
+#### [-Learn C++ Concepts (by Saurabh Shukla, in Hindi/Urdu)](https://www.youtube.com/channel/UCD-scAE4ju78dld1kpcsQfQ/playlists)
 
 ## Reference Material
 #### [-Cplusplus: ](https://cplusplus.com/reference/) ([references](https://cplusplus.com/reference/) - [tutorials](https://cplusplus.com/doc/tutorial/))
