@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+struct player{
+	string name;
+	int home_runs;
+	int num_of_hits;
+};
+
+
+int main(){
+	int dec;
+	int i;
+	player p[10]{"Rayyan",12,15,"Arham",16,24,"Nashit",24,11,"Taha",41,22,"Kamran",98,15,"Ahmed",15,14,"Abid",15,67,"Inshal",11,13,"Sarim",56,12,"Samih",45,12};
+	
+	cout<<"-----MENU-----"<<endl;
+	cout<<"1. View Record"<<endl;
+	cout<<"2. Change Record"<<endl;
+	cin>>dec;
+	
+	if(dec==1){
+		
+		for(i=0;i<10;i++){
+			cout<<endl;
+			cout<<"Player Name: "<<p[i].name<<endl;
+			cout<<"Home Runs: "<<p[i].home_runs<<endl;
+			cout<<"Num of Hits: "<<p[i].num_of_hits<<endl;
+		}
+	}
+	
+	else if(dec==2){
+		int id;
+		cout<<"Enter number of Player you want to change between 1-10"<<endl;
+		cin>>id;
+		
+		cout<<"Enter name: ";
+		cin>>p[id].name;
+		cout<<endl;
+		
+		cout<<"Enter Home runs: ";
+		cin>>p[id].home_runs;
+		cout<<endl;
+		
+		cout<<"Enter num of hits: ";
+		cin>>p[id].num_of_hits;
+		cout<<endl;
+		cout<<endl;
+		cout<<endl;
+		
+		cout<<"SHOWING UPDATED RECORD"<<endl;
+		
+		for(i=0;i<10;i++){
+			cout<<endl;
+			cout<<"Player Name: "<<p[i].name<<endl;
+			cout<<"Home Runs: "<<p[i].home_runs<<endl;
+			cout<<"Num of Hits: "<<p[i].num_of_hits<<endl;
+		}
+	}
+}

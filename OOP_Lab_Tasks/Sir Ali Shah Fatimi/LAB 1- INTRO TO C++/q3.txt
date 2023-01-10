@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	string name;
+	float s1;
+	float s2;
+	float s3;
+	float s4;
+	float s5;
+	float avg;
+	
+	cout<<"Enter name: ";
+	cin>>name;
+	cout<<endl;
+	
+	cout<<"Enter number of test 1: ";
+	cin>>s1;
+	cout<<endl;
+	
+	cout<<"Enter number of test 2: ";
+	cin>>s2;
+	cout<<endl;
+	
+	cout<<"Enter number of test 3: ";
+	cin>>s3;
+	cout<<endl;
+	
+	cout<<"Enter number of test 4: ";
+	cin>>s4;
+	cout<<endl;
+	
+	cout<<"Enter number of test 5: ";
+	cin>>s5;
+	cout<<endl;
+	
+	avg=(s1+s2+s3+s4+s5)/5;
+	
+	cout<<"Student Name: "<<name;
+	cout<<endl;
+	cout<<"Test Scores: "<<" "<<s1<<" "<<s2<<" "<<" "<<s3<<" "<<s4<<" "<<s5;
+	cout<<endl;
+	cout<<"Average test score: "<<avg;
+	
+	
+}

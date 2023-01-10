@@ -1,0 +1,348 @@
+Q1	
+
+#include<iostream>
+using namespace std;
+
+float residential(){
+	cout<<endl<<"YOU HAVE SELECTED RESIDENTIAL!"<<endl;
+	float prem_chan;
+	float sum;
+	
+	cout<<"Enter number of premium channels: ";
+	cin>>prem_chan;
+	
+	prem_chan=prem_chan*7.5;
+	sum=prem_chan+20.5+4.5;
+	
+	return sum;
+}
+
+float business(){
+	cout<<endl<<"YOU HAVE SELECTED BUSINESS!"<<endl;
+	float prem_chan;
+	float sum;
+	
+	cout<<"Enter number of premium channels: ";
+	cin>>prem_chan;
+	
+	if(prem_chan<10){
+	prem_chan=prem_chan*50;
+	sum=prem_chan+75+15;
+	}
+	else{
+	prem_chan=prem_chan*50;
+	sum=prem_chan+75+15+5;
+		
+	}
+	return sum;
+}
+
+
+
+int main(){
+	int acc_num;
+	char dec;
+	
+	cout<<"Enter account number: ";
+	cin>>acc_num;
+	cout<<endl;
+	cout<<"Enter Customer code, R for residential and B for business: ";
+	cin>>dec;
+	
+	if(dec=='R'){
+		float x;
+		
+		x=residential();
+		cout<<endl<<"----BILLING INFO----"<<endl;
+		cout<<endl<<"Account number: "<<acc_num<<endl;
+		cout<<"TOTAL AMOUNT DUE FOR RESIDENTIAL ACCOUNT: $ "<<x<<endl;
+		
+	}
+	else if (dec=='B'){
+		float y;
+		
+		y=business();
+		cout<<endl<<"----BILLING INFO----"<<endl;
+		cout<<endl<<"Account number: "<<acc_num<<endl;
+		cout<<"TOTAL AMOUNT DUE FOR BUSINESS ACCOUNT: $ "<<y<<endl;;
+	}
+}
+
+
+
+
+
+
+
+
+Q2
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+void FeetandInchestoMetersandCenti(float feet, float inches){
+	float meters, centimeters;
+	
+	meters = feet * 0.3048;
+	centimeters = inches * 2.54;
+	
+	cout<<endl<<"Meters: "<<meters<<" m";
+	cout<<endl<<"Centimeters: "<<centimeters<<" cm";
+}
+
+void MetersandCentitoFeetandInches(float *meters, float *centimeters){
+	float feet, inches;
+	
+	feet = *meters * 0.3048;
+	inches = *centimeters * 2.54;
+	
+	cout<<endl<<"Feet: "<<feet<<" ft.";
+	cout<<endl<<"Inches: "<<inches<<" in";
+	
+}
+void showChoices(){
+	
+	cout<<"Do you want to convert: \n";
+	cout<<"1. Feet and Inches to Meters and Centi\n";
+	cout<<"2. Meters and Centi to Feet and Inches\n";
+}
+int main(){
+	char dec1='y';
+	
+	
+	while (dec1=='y'){
+	int dec;
+	showChoices();
+	cin>>dec;
+	if (dec==1){
+		float feet;
+		float inches;
+		
+		cout<<"Enter feet: ";
+		cin>>feet;
+		cout<<"Enter inches: ";
+		cin>>inches;
+		
+		FeetandInchestoMetersandCenti(feet, inches);
+	}
+	else if(dec==2){
+		float meters;
+		float centimeters;
+		
+		cout<<"Enter meters: ";
+		cin>>meters;
+		cout<<"Enter cenitmeters: ";
+		cin>>centimeters;
+		
+		MetersandCentitoFeetandInches(&meters, &centimeters);
+	}
+	
+	cout<<"\n\n\nDo you want to convert again? (y/n)\n";
+	cin>>dec1;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q3
+#include<iostream>
+using namespace std;
+
+int main(){
+	int acc_num;
+	char code;
+	int min;
+	float sum;
+	
+	cout<<"Enter account number: ";
+	cin>>acc_num;
+	cout<<"Enter service code: ";
+	cin>>code;
+	
+	
+	if(code=='r'||code=='R'){
+	cout<<"Enter number of minutes service was used: ";
+	cin>>min;
+	
+		if (min<50){
+			sum=10;
+		}
+		else{
+			min=(min-50)*0.20;
+			sum=10+min;		
+		}
+		
+		cout<<"\n\n\n----BILL----"<<endl;
+		cout<<"Total minutes: "<<min<<endl;
+		cout<<"Total amount: $ "<<sum<<endl;
+	}
+	
+	
+	else if(code=='p'||code=='P'){
+		int day,night;
+		
+		cout<<"\n\nHow many hours were used during day: ";
+		cin>>day;
+		cout<<"\n\nHow many hours were used during night: ";
+		cin>>night;
+		
+		if(day<75){
+            sum=25;
+        }
+        else if (day>75){
+            day=(day-75)*0.1;
+            sum=25+day;
+        }
+
+
+
+        if(night>100){
+			night=(night-100)*0.05;
+			sum=sum+night;
+        }
+        
+        cout<<"\n\n\n----BILL----"<<endl;
+        cout<<"Num of mins during day: "<<day<<endl;
+        cout<<"Num of mins during night: "<<night<<endl;
+        cout<<"Total amount: $ "<<sum;
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Q4
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+float distance(float x1, float y1, float x2, float y2){
+	float dist;
+	float one,two;
+	
+	one=pow(x2-x1,2);
+	two=pow(y2-y1,2);
+	
+	return sqrt(one+two);
+	
+}
+
+float radius(float x1, float y1, float x2, float y2){
+	distance(x1,y1,x2,y2);
+}
+
+float circumference(float radius){
+	return 2*3.1416*radius;
+}
+
+float area(float radius){
+	return pow(3.1416*radius,2);
+}
+
+int main(){
+	system("color 00"); //awaien using colour :P
+	float x1,x2;
+	float y1,y2;
+	float dist,rad,are,circ;
+	cout<<"Enter x and y coordinates of point: ";
+	cin>>x1;
+	cin>>y1;
+	
+	cout<<"Enter x and y coordinates of any point: ";
+	cin>>x2;
+	cin>>y2;
+	
+	cout<<"\x1b[36m";
+	dist=distance(x1,y1,x2,y2);
+	cout<<"Distance between the points: "<<dist<<" m"<<endl;
+	
+	rad=radius(x1,y1,x2,y2);
+	cout<<"Radius between the points: "<<rad<<" m"<<endl;
+	
+	circ=circumference(rad);
+	cout<<"Circumference of circle: "<<circ<<" m"<<endl;
+	
+	are=area(rad);
+	cout<<"Area of circle: "<<are<<" m^2"<<endl;
+	
+	cout<<"\x1b[0m";
+}
+
+
+
+
+
+
+
+
+
+
+Q5
+#include<iostream>
+using namespace std;
+
+float func(float h_rate,float total_consulting_time,float income){
+	float sum;
+	
+	if(income<=25000){
+		if(total_consulting_time<=30){
+			
+			return h_rate;
+		}
+		else if(total_consulting_time>30){
+			sum=h_rate*((total_consulting_time-30)*0.4);
+			return sum;
+		}
+	}
+	else if(income>25000){
+		if(total_consulting_time<=20){
+			return h_rate;
+		}
+		else if(total_consulting_time>20){
+			sum=h_rate*((total_consulting_time-20)*0.7);
+			return sum;
+		}
+	}
+}
+
+
+int main(){
+	float h_rate;
+	float total_consulting_time;
+	float income;
+	float ans;
+	
+	cout<<"Enter the hourly rate: ";
+	cin>>h_rate;
+	
+	cout<<"Enter consulting time in MINUTES: ";
+	cin>>total_consulting_time;
+	
+	cout<<"Enter income: ";
+	cin>>income;
+	
+			
+	ans=func(h_rate, total_consulting_time,income);
+	cout<<"\n\nYour bill is: $ "<<ans;
+	
+}

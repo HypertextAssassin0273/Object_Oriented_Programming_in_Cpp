@@ -1,0 +1,54 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+struct menuItemType{
+	string menuItem;
+	double menuPrice;
+};
+
+int main(){
+	int i;
+	int food;
+	int arr[10];
+	char dec='y';
+	int p=0;
+	float sum=0;
+	float  tax=0;
+	float total=0;
+	
+	menuItemType m[8]={"Plain Egg",1.45,"Bacon and Egg",2.45,"Muffin",0.99,"French Toast",1.99,"Fruit Basket",2.49,"Cereal",0.69,"Coffee",0.50,"Tea",0.75};
+	
+	for(i=0;i<8;i++){
+		cout<<left<<setw(20)<<m[i].menuItem;
+		cout<<left<<setw(50)<<m[i].menuPrice;
+		cout<<endl;
+	}
+	
+	cout<<endl;
+	cout<<endl;
+	
+	while(dec=='y'){
+	cout<<"Enter number of food: ";
+	cin>>food;
+	
+	arr[p++]=food-1;
+	sum=sum+m[food-1].menuPrice;
+	
+	cout<<"Would You like to order anything else? (y/n)"<<endl;
+	cin>>dec;
+	}
+	
+	cout<<"Welcome to Johnny's Restaurant"<<endl;
+	for(int i=0; i<p; i++){
+		cout<< "\n" <<left<<setw(20)<<setprecision(2)<<m[arr[i]].menuItem<< " $"<<m[arr[i]].menuPrice;
+	}
+	tax = sum*5/100;
+	cout<<left<<setw(20)<<"\nTax";
+	cout<<"  $"<<left<<setw(50)<<tax;
+	
+	cout<<left<<setw(20)<<"\nAmount Due";
+	cout<<"  $"<<left<<setw(50)<<sum+tax;
+	
+}

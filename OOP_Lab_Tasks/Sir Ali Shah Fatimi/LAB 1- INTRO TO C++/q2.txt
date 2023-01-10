@@ -1,0 +1,48 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+	string m_name;
+	float a_price;
+	float c_price;
+	float a_sold;
+	float c_sold;
+	float percentage;
+	
+	cout<<"Enter Movie name:  ";
+	getline(cin,m_name);
+	cout<<endl;
+	
+	cout<<"Enter Adult ticket price:  ";
+	cin>>a_price;
+	cout<<endl;
+	
+	cout<<"Enter Child ticket price:  ";
+	cin>>c_price;
+	cout<<endl;
+	
+	cout<<"Enter no. of adult tickets sold:  ";
+	cin>>a_sold;
+	cout<<endl;
+	
+	cout<<"Enter no. of child tickets sold:  ";
+	cin>>c_sold;
+	cout<<endl;
+	
+	cout<<"Enter percentage of gross amount donated to cahrity: ";
+	cin>>percentage;
+	cout<<endl;
+	cout<<endl;
+	cout<<endl;
+	
+	printf("_**__*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*__\n");
+	cout<<"Movie name:..........................."<<m_name<<endl;
+	printf("Number of ticekts sold:...............%0.2f\n",a_sold+c_sold);
+	printf("Gross Amount:.........................$%0.2f\n",(a_sold*a_price)+(c_sold*c_price));
+	printf("Percentage of gross Amount donated:...%0.2f%%\n",percentage);
+	printf("Amount donated:.......................$%0.2f\n",((a_sold*a_price)+(c_sold*c_price))/percentage);
+	printf("Net Sale:.............................$%0.2f\n",(a_sold+c_sold)-( (a_sold*a_price)+(c_sold*c_price))/percentage);
+		
+	
+}
